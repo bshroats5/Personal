@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Bret Shroats - Personal Website</title>  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="personal.css" rel="stylesheet">
-</head>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='personal.css') }}">
+        <title>Bret Shroats - Personal Website</title>
+    </head>
 <body>
-    <h1>Bret Shroats</h1>  <div class="topnav">
-        <a class="active" href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="past-work.html">Past Work</a>
-        <a href="contact.html">Contact Me</a>
+    <h1>Bret Shroats</h1>  
+    <div class="topnav">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About Me</a>
+        <a href="{{ url_for('past_work') }}">Past Work</a>
+        <a href="{{ url_for('contact') }}">Contact Me</a>
     </div>
 
-    <div class="container">  <img src="Me.jpg" alt="Portrait of Bret Shroats">
-
+    <div>
+        <img src="{{ url_for('static', filename='Me.jpg') }}" alt="Portrait of me">
+    </div>
         <p>
             Hello World! My name is Bret Shroats and I am a student of life. I am always looking to learn new things. I recently switched my focus from Web Development to Data Analytics. <br>
             I love my God, my family, and my sports teams. I would love to connect with you. Please continue to surf the site to learn more.
