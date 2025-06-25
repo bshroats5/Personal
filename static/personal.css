@@ -1,58 +1,197 @@
-body {
-    background-color: #f4f4f4; /* Light gray background */
-    color: #333; /* Dark gray text */
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0; /* Reset default margins */
+* {
+    margin: 0;
     padding: 0;
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Navigation Styles */
 .topnav {
-    background-color: #0056b3; /* Darker blue */
-    overflow: hidden;
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
 
 .topnav a {
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
 }
 
 .topnav a:hover {
-    background-color: #003366; /* Even darker blue */
-    color: white;
+    color: #333;
 }
 
 .topnav a.active {
-    background-color: #003366;
-    color: white;
+    color: #333;
 }
 
-img {
-    max-width: 100%; /* Responsive images */
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Center images */
-    padding: 10px;
+.resume-button {
+    border: 2px solid #6c9cff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    color: #6c9cff !important;
+    transition: all 0.3s ease;
 }
 
-/* Example of Flexbox layout */
-.container {
+.resume-button:hover {
+    background-color: #6c9cff;
+    color: white !important;
+}
+
+/* Hero Section */
+.hero-section {
+    flex: 1;
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center;   /* Center content vertically */
-    min-height: 80vh;      /* At least 80% of the viewport height */
+    align-items: center;
+    padding: 60px 0;
 }
 
-footer {
-    background-color: #333;
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Text Content */
+.text-content {
+    padding-right: 40px;
+}
+
+.intro-text {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.name-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.projects-button {
+    display: inline-block;
+    background-color: #6c9cff;
     color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative; /* Changed from absolute to relative, adjust as needed */
-    bottom: 0;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+}
+
+.projects-button:hover {
+    background-color: #5a8ae8;
+}
+
+/* Image Content */
+.image-content {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
     width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #f8f8f8;
+    color: #666;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #6c9cff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .topnav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .text-content {
+        padding-right: 0;
+    }
+    
+    .name-title {
+        font-size: 36px;
+    }
+    
+    .image-content {
+        order: -1;
+    }
 }

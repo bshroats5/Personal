@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="{{ url_for('static', filename='personal.css') }}">
-        <title>Bret Shroats - Personal Website</title>
-    </head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='personal.css') }}">
+    <title>Bret Shroats - Personal Website</title>
+</head>
 <body>
-    <h1>Bret Shroats</h1>  
-    <div class="topnav">
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('about') }}">About Me</a>
-        <a href="{{ url_for('past_work') }}">Past Work</a>
-        <a href="{{ url_for('contact') }}">Contact Me</a>
-    </div>
+    <header>
+        <div class="header-container">
+            <h1 class="site-title">B. Shroats</h1>
+            <nav class="topnav">
+                <a href="{{ url_for('index') }}" class="active">HOME</a>
+                <a href="{{ url_for('about') }}">ABOUT</a>
+                <a href="{{ url_for('past_work') }}">PORTFOLIO</a>
+                <a href="#">HUCK</a>
+                <a href="#">THE FIANCÉ</a>
+                <a href="{{ url_for('contact') }}" class="resume-button">RESUME</a>
+            </nav>
+        </div>
+    </header>
 
-    <div>
-        <img src="{{ url_for('static', filename='Me.jpg') }}" alt="Portrait of me">
-    </div>
-        <p>
-            Hello World! My name is Bret Shroats and I am a student of life. I am always looking to learn new things. I recently switched my focus from Web Development to Data Analytics. <br>
-            I love my God, my family, and my sports teams. I would love to connect with you. Please continue to surf the site to learn more.
-        </p>
-
-        <p>
-            I am passionate about leveraging technology to solve problems and am currently expanding my skills in data analytics.
-        </p>
-
-<p>
-    <b><a href="{{ url_for('past_work') }}">View my projects and experience</a></b> | 
-    <b><a href="{{ url_for('contact') }}">Contact me</a></b>
-</p>
-    </div>
+    <main class="hero-section">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <p class="intro-text">I am</p>
+                <h2 class="name-title">Bret Shroats</h2>
+                <p class="tagline">Contemplative coder and analyst, inspired by tough problems.</p>
+                <a href="{{ url_for('past_work') }}" class="projects-button">MY PROJECTS</a>
+            </div>
+            <div class="image-content">
+                <img src="{{ url_for('static', filename='Me.jpg') }}" alt="Portrait of me" class="profile-image">
+            </div>
+        </div>
+    </main>
 
     <footer>
         &copy; 2025 Bret Shroats | <a href="mailto:bshroats5@gmail.com">Send me an email</a>
