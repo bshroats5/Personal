@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About Bret Shroats</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="personal.css">
-</head>
-<body>
-    <h1>About Me</h1>
+<link rel="stylesheet" href="{{ url_for('static', filename='personal.css') }}">
 
-    <div class="topnav">
-        <a href="index.html">Home</a>
-        <a class="active" href="about.html">About Me</a>
-        <a href="past-work.html">Past Work</a>
-        <a href="contact.html">Contact Me</a>
-    </div>
+<!-- Update navigation -->
+<div class="topnav">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a class="active" href="{{ url_for('about') }}">About Me</a>
+    <a href="{{ url_for('past_work') }}">Past Work</a>
+    <a href="{{ url_for('contact') }}">Contact Me</a>
+</div>
 
-    <div class="about-container">  <img src="family.jpg" alt="Portrait of my family at Disney World">
+<!-- Update image source -->
+<img src="{{ url_for('static', filename='family.jpg') }}" alt="Portrait of my family at Disney World">
 
         <div class="about-text">
             <p>
