@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Bret Shroats - Past Work</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="personal.css" rel="stylesheet">
-</head>
-<body>
-    <h1>Past Work</h1>
+<link rel="stylesheet" href="{{ url_for('static', filename='personal.css') }}">
 
-    <div class="topnav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a class="active" href="past-work.html">Past Work</a>
-        <a href="contact.html">Contact Me</a>
-    </div>
+<div class="topnav">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('about') }}">About Me</a>
+    <a class="active" href="{{ url_for('past_work') }}">Past Work</a>
+    <a href="{{ url_for('contact') }}">Contact Me</a>
+</div>
 
     <div class="work-container">  <section class="work-item">
             <h2>Technical Support Specialist</h2>
