@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Google font for a cleaner look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='personal.css') }}">
-    <title>Bret Shroats - Personal Website</title>
+    <title>Bret Shroats – Personal site</title>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1 class="site-title">B. Shroats</h1>
-            <nav class="topnav">
+
+    <!-- ── Header ───────────────────────────────────────────── -->
+    <header class="site-header">
+        <div class="header-inner">
+            <h1 class="logo">B. Shroats</h1>
+            <nav class="main-nav">
                 <a href="{{ url_for('index') }}" class="active">HOME</a>
                 <a href="{{ url_for('about') }}">ABOUT</a>
                 <a href="{{ url_for('past_work') }}">PORTFOLIO</a>
                 <a href="#">HUCK</a>
                 <a href="#">THE FIANCÉ</a>
-                <a href="{{ url_for('contact') }}" class="resume-button">RESUME</a>
+                <a href="{{ url_for('contact') }}" class="pill">RESUME</a>
             </nav>
         </div>
     </header>
 
-    <main class="hero-section">
-        <div class="content-wrapper">
-            <div class="text-content">
-                <p class="intro-text">I am</p>
-                <h2 class="name-title">Bret Shroats</h2>
-                <p class="tagline">Contemplative coder and analyst, inspired by tough problems.</p>
-                <a href="{{ url_for('past_work') }}" class="projects-button">MY PROJECTS</a>
+    <!-- ── Hero section ─────────────────────────────────────── -->
+    <section class="hero">
+        <div class="hero-grid">
+            <!-- left side -->
+            <div class="hero-text">
+                <p class="small">I am</p>
+                <h2 class="big">Bret Shroats</h2>
+                <p class="tagline">
+                    Contemplative coder and analyst, inspired by tough problems.
+                </p>
+                <a href="{{ url_for('past_work') }}" class="btn">MY PROJECTS</a>
             </div>
-            <div class="image-content">
-                <img src="{{ url_for('static', filename='Me.jpg') }}" alt="Portrait of me" class="profile-image">
+
+            <!-- right side -->
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='Me.jpg') }}" alt="Portrait of Bret" class="portrait">
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer>
-        &copy; 2025 Bret Shroats | <a href="mailto:bshroats5@gmail.com">Send me an email</a>
+    <!-- ── Footer ───────────────────────────────────────────── -->
+    <footer class="site-footer">
+        © 2025 Bret Shroats | 
+        <a href="mailto:bshroats5@gmail.com">bshroats5@gmail.com</a>
     </footer>
+
 </body>
 </html>
