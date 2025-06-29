@@ -87,13 +87,12 @@ body{
     display:flex;
     justify-content:center;
 }
-/* --- force a hard size cap on the hero photo ---------------- */
-.portrait {
-    max-width: 350px !important;   /* never larger than 350 px */
-    width: 100% !important;        /* shrink nicely on phones  */
-    height: auto !important;       /* keep the aspect ratio    */
-    border-radius: 8px;
-    box-shadow: 0 8px 32px rgba(0,0,0,.12);
+.portrait{
+    width:100%;
+    max-width:350px;   /* *** key size limit *** */
+    height:auto;
+    border-radius:8px;
+    box-shadow:0 8px 32px rgba(0,0,0,.12);
 }
 
 /* ── Footer ──────────────────────────────────────────────── */
