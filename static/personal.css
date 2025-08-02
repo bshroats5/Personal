@@ -2,156 +2,150 @@
 *,
 *::before,
 *::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-
-/* ── 2. Base styles ──────────────────────────────────────── */
-body{
-    font-family:"Poppins",system-ui,-apple-system,BlinkMacSystemFont,
-                "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    color:#333;
-    background:#f7f8ff;         /* very subtle violet tint like the screenshot */
-    line-height:1.65;
-
-    /* let footer stick to bottom without flex-box hacks */
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
+/* 2. Base styles */
+body {
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+    background: #f7f8ff;
+    line-height: 1.65;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* ── 3. Header / nav ─────────────────────────────────────── */
-.site-header{
-    background:#fff;
-    border-bottom:1px solid #e9e9e9;
-    position:sticky; top:0;     /* stays visible when you scroll */
-    z-index:10;
-}
-.header-inner{
-    max-width:1200px;
-    margin:0 auto;
-    padding:20px 32px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-.logo{
-    font-size:26px;
-    font-weight:700;
-    letter-spacing:.2px;
-}
-.main-nav{
-    display:flex;
-    gap:28px;
-    font-size:14px;
-    font-weight:500;
-}
-.main-nav a{
-    color:#666;
-    text-decoration:none;
-    transition:color .25s;
-    letter-spacing:.5px;
-}
-.main-nav a:hover,
-.main-nav a.active{
-    color:#000;
-}
-.main-nav a.pill{
-    padding:6px 20px;
-    border:2px solid #6c9cff;
-    border-radius:1000px;
-    color:#6c9cff;
-}
-.main-nav a.pill:hover{
-    background:#6c9cff;
-    color:#fff;
+/* 3. Typography */
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2.5rem;
 }
 
-/* ── 4. Hero section ─────────────────────────────────────── */
-.hero{
-    flex:1;                     /* push footer to bottom */
-    display:flex;
-    align-items:center;
-    padding:120px 0;            /* bigger breathing room like screenshot */
-}
-.hero-grid{
-    max-width:1200px;
-    margin:0 auto;
-    padding:0 32px;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:72px;
-    align-items:center;
-}
-.hero-text .small{
-    font-size:18px;
-    margin-bottom:8px;
-    color:#666;
-}
-.hero-text .big{
-    font-size:46px;
-    font-weight:700;
-    line-height:1.15;
-    margin-bottom:20px;
-}
-.tagline{
-    font-size:18px;
-    color:#666;
-    max-width:28ch;
-    margin-bottom:40px;
-}
-/* gradient button like the screenshot */
-.btn{
-    display:inline-block;
-    padding:12px 32px;
-    font-size:14px;
-    font-weight:600;
-    border-radius:6px;
-    color:#fff;
-    text-decoration:none;
-    background:linear-gradient(135deg,#8e9bff 0%,#67caff 100%);
-    transition:filter .25s;
-}
-.btn:hover{ filter:brightness(.9); }
-
-/* ── 5. Portrait ─────────────────────────────────────────── */
-.hero-image{ display:flex; justify-content:center; }
-.portrait{
-    width:100%;
-    max-width:350px;
-    border-radius:8px;
-    box-shadow:0 8px 32px rgba(0,0,0,.12);
-    height:auto;
+/* 4. Navigation */
+.topnav {
+    background: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e9e9e9;
+    margin-bottom: 2rem;
 }
 
-/* ── 6. Footer ───────────────────────────────────────────── */
-.site-footer{
-    font-size:14px;
-    color:#666;
-    background:#fafafa;
-    text-align:center;
-    padding:28px 0;
+.topnav a {
+    color: #666;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-weight: 500;
+    transition: color 0.25s;
 }
-.site-footer a{
-    color:#6c9cff;
-    text-decoration:none;
+
+.topnav a:hover,
+.topnav a.active {
+    color: #6c9cff;
 }
-.site-footer a:hover{ text-decoration:underline; }
 
-/* ── 7. Responsive tweaks ───────────────────────────────── */
-@media(max-width:768px){
-    .header-inner{ flex-direction:column; gap:18px; }
-    .main-nav{ flex-wrap:wrap; justify-content:center; }
+/* 5. Main Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    flex: 1;
+}
 
-    .hero-grid{
-        grid-template-columns:1fr;
-        text-align:center;
+/* Image styles */
+.profile-image {
+    display: block;
+    max-width: 350px;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,.12);
+}
+
+/* 6. Work and Project Sections */
+.work-container,
+.contact-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.work-item,
+.project-item {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+/* 7. Contact Page */
+.contact-container ul {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.contact-container li {
+    margin-bottom: 1rem;
+}
+
+.contact-container a {
+    color: #6c9cff;
+    text-decoration: none;
+}
+
+.contact-container a:hover {
+    text-decoration: underline;
+}
+
+/* 8. Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #fafafa;
+    margin-top: auto;
+    border-top: 1px solid #e9e9e9;
+}
+
+footer a {
+    color: #6c9cff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* 9. General Utilities */
+.text-center {
+    text-align: center;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+/* 10. Responsive Design */
+@media (max-width: 768px) {
+    .topnav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
-    .hero-image{ order:-1; margin-bottom:40px; }
-    .portrait{ max-width:260px; }
-    .hero-text .big{ font-size:38px; }
+
+    .topnav a {
+        display: block;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .profile-image {
+        max-width: 250px;
+    }
 }
