@@ -118,6 +118,30 @@ body{
 }
 .btn:hover{ filter:brightness(.9); }
 
+.button-group {
+  display: flex;
+  align-items: center; /* Vertically aligns buttons if they have different heights */
+  gap: 16px; /* Adjust the space between the buttons */
+  margin-top: 24px; /* Optional: Adds space above the buttons */
+}
+
+/* Use the correct class name for your main section! */
+.hero-section {
+  display: flex;
+  align-items: center; /* This vertically aligns the text and image */
+  justify-content: space-between; /* This pushes them apart */
+  gap: 40px; /* Adds space between text and image (optional) */
+}
+
+/* Optional: It's good practice to control the size of the columns */
+.intro-content {
+  flex: 1; /* Allows the text column to grow */
+}
+
+.profile-picture {
+  flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
 /* ── 5. Portrait ─────────────────────────────────────────── */
 .hero-image{ display:flex; justify-content:center; }
 .portrait{
