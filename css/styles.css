@@ -179,3 +179,21 @@ body{
     .portrait{ max-width:260px; }
     .hero-text .big{ font-size:38px; }
 }
+
+.btn-secondary {
+    background: none;
+    border: 2px solid #6c9cff;
+    color: #6c9cff;
+}
+
+.btn-secondary:hover {
+    background: #6c9cff;
+    color: #fff;
+    filter: none;
+}
+
+.button-group {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
