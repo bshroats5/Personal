@@ -22,52 +22,35 @@
         </div>
     </header>
 
-<body>
-
-    <header class="container">
-        <div class="logo">Bret Shroats</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Past Work</a></li>
-                <li><a href="#" class="nav-button">Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero-section container">
-            
-            <!-- Column 1: All Text Content -->
-            <div class="hero-text-content">
-                <p>Hello, I'm</p>
-                <h1>Bret Shroats</h1>
-                <p>
+    <main class="hero">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <p class="small">Hello, I'm</p>
+                <h1 class="big">Bret Shroats</h1>
+                <p class="tagline">
                     A passionate learner transitioning from Web Development to Data
                     Analytics, dedicated to leveraging technology to solve real-world
                     problems.
                 </p>
-                <p>
-                    With a strong foundation in HTML, CSS, and JavaScript, I am excited to apply my skills in data analysis to uncover insights and drive decision-making.
+                <p class="tagline">
+                    With a strong foundation in HTML, CSS, and JavaScript, I am excited to apply 
+                    my skills in data analysis to uncover insights and drive decision-making.
                 </p>
                 
-                <!-- This group now sits correctly inside the text column -->
                 <div class="button-group">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#contact" class="btn">Get in Touch</a>
                     <a href="#projects" class="btn btn-secondary">View My Projects</a>
                 </div>
             </div>
 
-            <!-- Column 2: The Image -->
-            <div class="hero-image-container">
-                <!-- !!! IMPORTANT: REPLACE THIS SRC WITH YOUR IMAGE PATH !!! -->
-                <img src="Me.jpg" alt="A head shot of Bret Shroats">
+            <div class="hero-image">
+                <img src="Me.jpg" alt="A head shot" class="portrait">
             </div>
-
-        </section>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Bret Shroats | <a href="mailto:email@example.com">Send me an email</a></p>
+    <footer class="site-footer">
+        <p>&copy; 2025 Bret Shroats | <a href="mailto:bshroats5@gmail.com">Send me an email</a></p>
     </footer>
+</body>
+</html>
