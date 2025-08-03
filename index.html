@@ -22,49 +22,55 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-grid">
-            <div class="hero-text">
-                <div class="small">Hello, I'm</div>
-                <div class="big">Bret Shroats</div>
-                <div class="tagline">
-                    A passionate learner transitioning from Web Development to Data Analytics, 
-                    dedicated to leveraging technology to solve real-world problems.
+<body>
+
+    <header class="container">
+        <div class="logo">Bret Shroats</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Past Work</a></li>
+                <li><a href="#" class="nav-button">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section container">
+            
+            <!-- Column 1: All Text Content -->
+            <div class="hero-text-content">
+                <p>Hello, I'm</p>
+                <h1>Bret Shroats</h1>
+                <p>
+                    A passionate learner transitioning from Web Development to Data
+                    Analytics, dedicated to leveraging technology to solve real-world
+                    problems.
+                </p>
+                <p>
+                    With a strong foundation in HTML, CSS, and JavaScript, I am excited to apply my skills in data analysis to uncover insights and drive decision-making.
+                </p>
+                
+                <!-- This group now sits correctly inside the text column -->
+                <div class="button-group">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View My Projects</a>
                 </div>
-                <div class="intro-content">
-                    <p>
-                        With a strong foundation in HTML, CSS, and JavaScript, I am excited to apply my skills in data analysis to uncover insights and drive decision-making.
-                    </p>
-                    <p>
-                        My journey in web development has equipped me with the ability to create user-friendly interfaces and understand the importance of data in making informed decisions.
-                    </p>
-
-  <!-- Create a new wrapper for the buttons -->
-<div class="button-group">
-  <a href="#contact" class="btn btn-primary">Get in Touch</a>
-  <a href="#projects" class="btn btn-secondary">View My Projects</a>
-</div>
-            <div class="hero-image">
-                <img src="images/Me.jpg" alt="Portrait of Bret Shroats" class="portrait">
             </div>
-        </div>
 
+            <!-- Column 2: The Image -->
+            <div class="hero-image-container">
+                <!-- !!! IMPORTANT: REPLACE THIS SRC WITH YOUR IMAGE PATH !!! -->
+                <img src="Me.jpg" alt="A head shot of Bret Shroats">
+            </div>
+
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div>
-            &copy; 2025 Bret Shroats | 
-            <a href="mailto:bshroats5@gmail.com">Send me an email</a>
-        </div>
-        <!-- <div class="social-links">
-            <a href="https://linkedin.com/in/bshroats5" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/bshroats5" target="_blank">GitHub</a>
-        </div> -->
+    <footer>
+        <p>&copy; 2025 Bret Shroats | <a href="mailto:email@example.com">Send me an email</a></p>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/scripts.js"></script>
 </body>
 </html>
