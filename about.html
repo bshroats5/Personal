@@ -3,9 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bret Shroats - Personal Website</title>
+    <title>Bret Shroats - About Me</title> <!-- Changed title to be page-specific -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Add Google Fonts - Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,42 +13,44 @@
         <div class="header-inner">
             <div class="logo">Bret Shroats</div>
             <nav class="main-nav">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About Me</a>
+                <a href="index.html">Home</a>
+                <!-- Set "About Me" as the active link on this page -->
+                <a href="about.html" class="active">About Me</a> 
                 <a href="projects.html">Projects</a>
                 <a href="contact.html" class="pill">Contact Me</a>
             </nav>
         </div>
     </header>
 
+    <!-- Main content area -->
+    <!-- We'll keep your class "hero" but style it as our about section -->
     <main class="hero">
         <div class="hero-grid">
             <div class="hero-text">
-                <p class="small">Hello, I'm</p>
-                <h1 class="big">Bret Shroats</h1>
-                <p class="tagline">
-                    Faith, Family, Tech, Sports.
+                
+                <!-- CHANGE 1: A proper heading for the page -->
+                <h2>About Me</h2>
+
+                <!-- CHANGE 2: Text is now in separate, more readable paragraphs -->
+                <p>
+                    As a Technical Support Specialist, I'm dedicated to empowering the people who help others. At the University of Kentucky's Center for Innovation in Population Health, I provide the technical backbone that enables Mental and Behavioral Health Specialists to train, educate, and make a difference worldwide.
                 </p>
-                <p class="tagline">
-I am a Technical Support Specialist II at the University of Kentucky Center for Innovation in Population Health dedicated to helping train and educate Child and Adult Mental and Behavioral 
-Specialists all over the World. My passion lies in helping others be their best self, and I believe that by working in the background and supporting them is the best way to make a 
-difference. With over 3 years of experience in Technical Support and Data Analysis, I specialize in turning complex problems into elegant, user-friendly solutions. 
-When I’m not at my desk, you can usually find me at a stadium with my family. Whether it is my daugher playing softball or going to a sporting event with my family, 
-I love being part of the action. 
+                <p>
+                    My passion is simple: I thrive on working behind the scenes to help people do their best work. With over 3 years of experience in technical support and data analysis, I specialize in translating complex challenges into elegant, user-friendly solutions.
                 </p>
-                <p class="tagline">
-                    I am always looking for new challenges and opportunities to grow, both personally and professionally.
-I'm always excited to connect with like-minded professionals, so feel free to reach out!
+                <p>
+                    When I’m not at my desk, you can usually find me at a stadium with my family. Whether it is my daughter playing softball or going to a sporting event, I love being part of the action.
                 </p>
                 
+                <!-- CHANGE 3: Updated the buttons to be more useful -->
                 <div class="button-group">
-                    <a href="#home" class="btn">Back to Homepage</a>
-                    <a href="#projects" class="btn btn-secondary">View My Projects</a>
+                    <a href="projects.html" class="btn">View My Projects</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Me</a>
                 </div>
             </div>
 
             <div class="hero-image">
-                <img src="family.jpg" alt="A picture of my family" class="portrait">
+                <img src="family.jpg" alt="A picture of Bret Shroats with family" class="portrait">
             </div>
         </div>
     </main>
