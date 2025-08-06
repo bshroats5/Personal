@@ -254,100 +254,80 @@ body {
   }
 }
 
-/* Contact Page Specific Styles */
-.contact-section {
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #f8f9ff 0%, #f1f4ff 100%);
-    min-height: calc(100vh - 200px);
-}
 
-.contact-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/* =============================================
+   Contact Page Styling (Using Bootstrap)
+   ============================================= */
 
-/* --- Option 1: Two-by-Two Grid --- */
 .contact-grid {
     display: grid;
-    /* This creates exactly 2 columns of equal width */
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-/* --- Media Query for Mobile --- */
-/* On screens 768px or less, stack them in one column */
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.contact-card {
+.contact-card-bootstrap {
     background: white;
-    padding: 32px;
-    border-radius: 16px;
+    border-radius: 15px;
+    padding: 2rem;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
 
-.contact-card:hover {
+.contact-card-bootstrap:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
-.contact-card i {
-    font-size: 32px;
-    color: var(--primary-color);
-    margin-bottom: 16px;
+.contact-card-bootstrap i {
+    font-size: 2.5rem;
+    color: #4a6fa5;
+    margin-bottom: 1rem;
 }
 
-.contact-card h3 {
-    font-size: 24px;
-    margin-bottom: 12px;
-    color: var(--text-dark);
+.contact-card-bootstrap .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
 }
 
-.contact-card a {
+.contact-card-bootstrap a {
+    color: #666;
     text-decoration: none;
-    color: var(--primary-color);
-    font-size: 18px;
-    display: block;
-    margin-top: 8px;
+    font-size: 1rem;
+}
+
+.contact-card-bootstrap a:hover {
+    color: #4a6fa5;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
 }
 
 .contact-title {
-    font-size: 48px;
     text-align: center;
-    margin-bottom: 20px;
-    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 2.8rem;
 }
 
 .contact-description {
     text-align: center;
-    font-size: 18px;
-    color: var(--text-light);
+    color: #666;
     max-width: 600px;
-    margin: 0 auto 60px;
-    line-height: 1.6;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
 }
 
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .contact-title {
-        font-size: 36px;
-    }
-
-    .contact-description {
-        font-size: 16px;
-        margin-bottom: 40px;
-    }
-}
-
+/* =============================================
+   Projects Page Styling
+   ============================================= */
 /* Projects Page Styles */
 .projects-container {
     max-width: var(--max-width);
