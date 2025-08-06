@@ -266,12 +266,20 @@ body {
     margin: 0 auto;
 }
 
+/* --- Option 1: Two-by-Two Grid --- */
 .contact-grid {
     display: grid;
+    /* This creates exactly 2 columns of equal width */
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    max-width: 1000px;
-    margin: 40px auto;
+}
+
+/* --- Media Query for Mobile --- */
+/* On screens 768px or less, stack them in one column */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .contact-card {
