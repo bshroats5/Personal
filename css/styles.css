@@ -1,272 +1,333 @@
-/* 1. CSS Reset / Normalize */
+/* 1. CSS Reset */
 *,
 *::before,
 *::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
-/* ── 2. Base styles ──────────────────────────────────────── */
-body{
-    font-family:"Poppins",system-ui,-apple-system,BlinkMacSystemFont,
-                "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    color:#333;
-    background:#f7f8ff;         /* very subtle violet tint like the screenshot */
-    line-height:1.65;
-
-    /* let footer stick to bottom without flex-box hacks */
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
+/* 2. Variables */
+:root {
+  --primary-color: #6c9cff;
+  --text-dark: #333;
+  --text-light: #666;
+  --background: #f7f8ff;
+  --white: #fff;
+  --max-width: 1200px;
+  --border-radius: 8px;
+  --transition: 0.25s;
 }
 
-/* ── 3. Header / nav ─────────────────────────────────────── */
-.site-header{
-    background:#fff;
-    border-bottom:1px solid #e9e9e9;
-    position:sticky; top:0;     /* stays visible when you scroll */
-    z-index:10;
+/* 3. Base styles */
+body {
+  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  color: var(--text-dark);
+  background: var(--background);
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.header-inner{
-    max-width:1200px;
-    margin:0 auto;
-    padding:20px 32px;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+/* 4. Layout Components */
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid #e9e9e9;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-.logo{
-    font-size:26px;
-    font-weight:700;
-    letter-spacing:.2px;
+
+.header-inner,
+.hero-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px 32px;
 }
-.main-nav{
-    display:flex;
-    gap:28px;
-    font-size:14px;
-    font-weight:500;
+
+/* Navigation */
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.main-nav a{
-    color:#666;
-    text-decoration:none;
-    transition:color .25s;
-    letter-spacing:.5px;
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #212529;
+    line-height: 1;
+    margin: 0; /* Reset default h1 margins */
+}
+
+.logo-tagline {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #6c757d;
+    letter-spacing: 0.5px;
+    margin: 4px 0 0 0; /* Reset default h2 margins, keep top spacing */
+}
+
+.main-nav {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.main-nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color var(--transition);
+  letter-spacing: 0.5px;
+}
+
 .main-nav a:hover,
-.main-nav a.active{
-    color:#000;
-}
-.main-nav a.pill{
-    padding:6px 20px;
-    border:2px solid #6c9cff;
-    border-radius:1000px;
-    color:#6c9cff;
-}
-.main-nav a.pill:hover{
-    background:#6c9cff;
-    color:#fff;
+.main-nav a.active {
+  color: var(--text-dark);
 }
 
-/* ── 4. Hero section ─────────────────────────────────────── */
-.hero{
-    flex:1;                     /* push footer to bottom */
-    display:flex;
-    align-items:center;
-    padding:120px 0;            /* bigger breathing room like screenshot */
+/* Pill Button */
+.main-nav a.pill {
+  padding: 6px 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 1000px;
+  color: var(--primary-color);
 }
-.hero-grid{
-    max-width:1200px;
-    margin:0 auto;
-    padding:0 32px;
 
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:72px;
-    align-items:center;
+.main-nav a.pill:hover {
+  background: var(--primary-color);
+  color: var(--white);
 }
-.hero-text .small{
-    font-size:18px;
-    margin-bottom:8px;
-    color:#666;
-}
-.hero-text .big{
-    font-size:46px;
-    font-weight:700;
-    line-height:1.15;
-    margin-bottom:20px;
-}
-.tagline{
-    font-size:18px;
-    color:#666;
-    max-width:28ch;
-    margin-bottom:40px;
-}
-/* gradient button like the screenshot */
-.btn{
-    display:inline-block;
-    padding:12px 32px;
-    font-size:14px;
-    font-weight:600;
-    border-radius:6px;
-    color:#fff;
-    text-decoration:none;
-    background:linear-gradient(135deg,#8e9bff 0%,#67caff 100%);
-    transition:filter .25s;
-}
-.btn:hover{ filter:brightness(.9); }
 
-.button-group {
+/* Hero Section */
+.hero {
+  flex: 1;
   display: flex;
-  align-items: center; /* Vertically aligns buttons if they have different heights */
-  gap: 16px; /* Adjust the space between the buttons */
-  margin-top: 24px; /* Optional: Adds space above the buttons */
+  align-items: center;
+  padding: 120px 0;
 }
 
-/* Use the correct class name for your main section! */
-.hero-section {
-  display: flex;
-  align-items: center; /* This vertically aligns the text and image */
-  justify-content: space-between; /* This pushes them apart */
-  gap: 40px; /* Adds space between text and image (optional) */
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 72px;
+  align-items: center;
 }
 
-/* Optional: It's good practice to control the size of the columns */
-.intro-content {
-  flex: 1; /* Allows the text column to grow */
+/* Text Styles */
+.hero-text .small {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: var(--text-light);
 }
 
-.profile-picture {
-  flex-shrink: 0; /* Prevents the image from shrinking */
+.hero-text .big {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 20px;
 }
 
-/* ── 5. Portrait ─────────────────────────────────────────── */
-.hero-image{ display:flex; justify-content:center; }
-.portrait{
-    width:100%;
-    max-width:350px;
-    border-radius:8px;
-    box-shadow:0 8px 32px rgba(0,0,0,.12);
-    height:auto;
+.tagline {
+  font-size: 18px;
+  color: var(--text-light);
+  max-width: 28ch;
+  margin-bottom: 40px;
 }
 
-/* ── 6. Footer ───────────────────────────────────────────── */
-.site-footer{
-    font-size:14px;
-    color:#666;
-    background:#fafafa;
-    text-align:center;
-    padding:28px 0;
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: filter var(--transition);
 }
-.site-footer a{
-    color:#6c9cff;
-    text-decoration:none;
-}
-.site-footer a:hover{ text-decoration:underline; }
 
-/* ── 7. Responsive tweaks ───────────────────────────────── */
-@media(max-width:768px){
-    .header-inner{ flex-direction:column; gap:18px; }
-    .main-nav{ flex-wrap:wrap; justify-content:center; }
-
-    .hero-grid{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-    .hero-image{ order:-1; margin-bottom:40px; }
-    .portrait{ max-width:260px; }
-    .hero-text .big{ font-size:38px; }
+.btn-primary {
+  color: var(--white);
+  background: linear-gradient(135deg, #8e9bff 0%, #67caff 100%);
 }
 
 .btn-secondary {
-    background: none;
-    border: 2px solid #6c9cff;
-    color: #6c9cff;
+  background: none;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn:hover {
+  filter: brightness(0.9);
 }
 
 .btn-secondary:hover {
-    background: #6c9cff;
-    color: #fff;
-    filter: none;
+  background: var(--primary-color);
+  color: var(--white);
+  filter: none;
 }
 
+/* Button Groups */
 .button-group {
-    display: flex;
-    gap: 16px;
-    margin-top: 32px;
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
 }
 
+/* Images */
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 350px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  height: auto;
+}
+
+/* Footer */
+.site-footer {
+  font-size: 14px;
+  color: var(--text-light);
+  background: #fafafa;
+  text-align: center;
+  padding: 28px 0;
+}
+
+.site-footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-image {
+    order: -1;
+    margin-bottom: 40px;
+  }
+
+  .portrait {
+    max-width: 260px;
+  }
+
+  .hero-text .big {
+    font-size: 38px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact Page Specific Styles */
 .contact-section {
     padding: 80px 20px;
     background: linear-gradient(135deg, #f8f9ff 0%, #f1f4ff 100%);
-    min-height: calc(100vh - 200px); /* Adjust based on your header/footer height */
+    min-height: calc(100vh - 200px);
 }
 
 .contact-container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.contact-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.contact-card i {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.contact-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.contact-card a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 18px;
+    display: block;
+    margin-top: 8px;
 }
 
 .contact-title {
     font-size: 48px;
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: var(--text-dark);
 }
 
 .contact-description {
     text-align: center;
     font-size: 18px;
-    color: #666;
+    color: var(--text-light);
     max-width: 600px;
     margin: 0 auto 60px;
     line-height: 1.6;
 }
 
-.contact-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
-}
-
-.contact-card {
-    background: white;
-    padding: 32px 24px;
-    border-radius: 16px;
-    text-align: center;
-    text-decoration: none;
-    color: #333;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.contact-card i {
-    font-size: 32px;
-    color: #6495ED;
-    margin-bottom: 16px;
-}
-
-.contact-card h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.contact-card p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    .contact-section {
-        padding: 60px 20px;
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .contact-title {
@@ -277,208 +338,4 @@ body{
         font-size: 16px;
         margin-bottom: 40px;
     }
-
-    .contact-cards {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-    }
 }
-
-/* =============================================
-   About Page Two-Column Layout
-   ============================================= */
-
-/* This targets the main grid container */
-.hero-grid {
-    display: flex;         /* Enables the two-column flexbox layout */
-    align-items: center;   /* Vertically aligns content in the middle */
-    gap: 60px;             /* Creates space between the text and image */
-    max-width: 1100px;     /* Sets a max width for the content */
-    margin: 60px auto;     /* Centers the grid on the page with vertical spacing */
-    padding: 0 20px;       /* Adds padding on the sides for smaller screens */
-}
-
-/* This targets the text container (the left column) */
-.hero-text {
-    flex: 2;               /* Makes the text column take up 2/3 of the space */
-    text-align: left;      /* <<< THIS IS THE KEY TO LEFT-ALIGNING YOUR TEXT! */
-}
-
-/* This targets the image container (the right column) */
-.hero-image {
-    flex: 1;               /* Makes the image column take up 1/3 of the space */
-}
-
-/* Styling the heading inside the text column */
-.hero-text h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-}
-
-/* Styling the paragraphs inside the text column */
-.hero-text p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-/* Styling the image */
-.hero-image .portrait {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* =============================================
-   Responsive Design for Mobile
-   ============================================= */
-
-/* This code applies only when the screen is 768px wide or less */
-@media (max-width: 768px) {
-    .hero-grid {
-        flex-direction: column; /* Stacks the columns on top of each other */
-        gap: 40px;              /* Adjusts the space for vertical stacking */
-        text-align: center;     /* Centers the content for a clean mobile look */
-    }
-
-    .hero-text {
-        text-align: left;       /* You can also set this to 'center' on mobile if you prefer */
-        order: 2;               /* Makes the text appear after the image on mobile */
-    }
-
-    .hero-image {
-        order: 1;               /* Makes the image appear first on mobile */
-    }
-}
-
-/* =============================================
-   Projects Page Layout
-   ============================================= */
-
-.projects-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.projects-container h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-}
-
-.projects-intro {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto 50px auto; /* Center the intro text */
-}
-
-/* The CSS Grid for the projects */
-.project-grid {
-    display: grid;
-    /* This creates a responsive grid: 
-       - It will fit as many columns as it can.
-       - Each column will be a minimum of 350px.
-       - Columns will grow equally to fill the space.
-    */
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-}
-
-/* Individual Project Card Styling */
-.project-card {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    overflow: hidden; /* Ensures image corners are rounded */
-    display: flex;
-    flex-direction: column; /* Stacks image and info vertically */
-    text-align: left; /* Aligns text inside the card to the left */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-.project-image img {
-    width: 100%;
-    height: 220px; /* Gives all cards a uniform image height */
-    object-fit: cover; /* Covers the area without stretching the image */
-}
-
-.project-info {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* Allows this section to grow, pushing the buttons to the bottom */
-}
-
-.project-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0 0 10px 0;
-}
-
-.project-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-    flex-grow: 1; /* Pushes the tech stack/buttons down */
-}
-
-/* Tech Stack Tags */
-.tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.tech-stack span {
-    background-color: #eef2f9; /* A light, soft blue */
-    color: #4a6fa5;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-/* Project Links/Buttons */
-.project-links {
-    display: flex;
-    gap: 15px;
-    margin-top: auto; /* Pushes the buttons to the very bottom of the card */
-}
-
-/* Assuming you have .btn styles already, if not, add them */
-.btn {
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-.btn { /* Primary Button Style */
-    background-color: #4a6fa5;
-    color: white;
-}
-.btn:hover {
-    background-color: #3b5a8a;
-}
-
-.btn-secondary { /* Secondary Button Style */
-    background-color: transparent;
-    color: #4a6fa5;
-    border: 1px solid #cdd6e4;
-}
-.btn-secondary:hover {
-    background-color: #eef2f9;
-}
-

@@ -1,112 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bret Shroats - My Projects</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Bret Shroats</title>
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
-    <!-- Header Section (Same as your other pages) -->
+    <!-- Header -->
     <header class="site-header">
         <div class="header-inner">
-            <div class="logo">Bret Shroats</div>
+            <div class="logo-container">
+                <h1 class="logo-name">Bret Shroats</h1>
+                <h2 class="logo-tagline">Faith | Family | Tech | Sports</h2>
+            </div>
             <nav class="main-nav">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Me</a>
-                <a href="projects.html" class="active">Projects</a>
-                <a href="contact.html" class="pill">Contact Me</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html" class="pill active">Contact Me</a>
             </nav>
         </div>
     </header>
 
-    <!-- Main Projects Section -->
-    <main class="projects-container">
-        <h1>My Work & Projects</h1>
-        <p class="projects-intro">Here are some of the projects I'm proud to have worked on. Each one presented a unique challenge and an opportunity to grow my skills.</p>
-
-        <!-- The Grid for all your project cards -->
-        <div class="project-grid">
-
-            <!-- === PROJECT CARD 1 === (Copy this whole block for a new project)
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="path/to/your/project-image-1.jpg" alt="Screenshot of Project One">
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">Project Title One</h3>
-                    <p class="project-description">
-                        This is a brief description of the project. I solved [problem] by building [solution], which led to [positive outcome].
-                    </p>
-                    <div class="tech-stack">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn" target="_blank" rel="noopener noreferrer">Live Site</a>
-                        <a href="#" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Code</a>
-                    </div>
-                </div>
-            </div>
-             === END OF PROJECT CARD 1 === -->
-
-            <!-- === PROJECT CARD 1 === -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="path/to/your/project-image-2.jpg" alt="Screenshot of Project Two">
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">Project Title Two</h3>
-                    <p class="project-description">
-                        A data analysis project where I explored [dataset] to uncover insights about [topic]. I used Python and SQL to clean and visualize the data.
-                    </p>
-                    <div class="tech-stack">
-                        <span>Data Analysis</span>
-                        <span>Python</span>
-                        <span>SQL</span>
-                        <span>Tableau</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn" target="_blank" rel="noopener noreferrer">View Analysis</a>
-                        <a href="#" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-                    </div>
-                </div>
-            </div>
-            <!-- === END OF PROJECT CARD 1 === -->
-
-            <!-- === PROJECT CARD 2 === -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="path/to/your/project-image-2.jpg" alt="Screenshot of Project Two">
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">Project Title Two</h3>
-                    <p class="project-description">
-                        A data analysis project where I explored [dataset] to uncover insights about [topic]. I used Python and SQL to clean and visualize the data.
-                    </p>
-                    <div class="tech-stack">
-                        <span>Data Analysis</span>
-                        <span>Python</span>
-                        <span>SQL</span>
-                        <span>Tableau</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn" target="_blank" rel="noopener noreferrer">View Analysis</a>
-                        <a href="#" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Add more project cards here by copying the block above -->
-
+    <!-- Main Contact Section -->
+    <main class="contact-container">
+        <h1>Let's Connect</h1>
+        <p class="contact-intro">I’m always open to new opportunities and collaborations. Feel free to reach out!</p>
+        
+        <div class="contact-grid">
+            
+            <!-- Email Card -->
+            <a href="mailto:bshroats5@gmail.com" class="contact-card">
+                <i class="fas fa-envelope"></i> <!-- EMAIL ICON -->
+                <h3>Email</h3>
+                <p>bshroats5@gmail.com</p>
+            </a>
+            
+            <!-- LinkedIn Card -->
+            <a href="https://linkedin.com/in/bshroats5" target="_blank" class="contact-card">
+                <i class="fab fa-linkedin"></i> <!-- LINKEDIN ICON -->
+                <h3>LinkedIn</h3>
+                <p>linkedin.com/in/bshroats5</p>
+            </a>
+            
+            <!-- GitHub Card -->
+            <a href="https://github.com/bshroats5" target="_blank" class="contact-card">
+                <i class="fab fa-github"></i> <!-- GITHUB ICON -->
+                <h3>GitHub</h3>
+                <p>github.com/bshroats5</p>
+            </a>
+            
+            <!-- Phone Card -->
+            <a href="tel:740-716-8081" class="contact-card">
+                <i class="fas fa-phone"></i> <!-- PHONE ICON -->
+                <h3>Phone</h3>
+                <p>(740) 716-8081</p>
+            </a>
+            
         </div>
     </main>
 
-    <!-- Footer Section (Same as your other pages) -->
+    <!-- Footer Section -->
     <footer class="site-footer">
         <p>&copy; 2025 Bret Shroats | <a href="mailto:bshroats5@gmail.com">Send me an email</a></p>
     </footer>
 </body>
-</html>
