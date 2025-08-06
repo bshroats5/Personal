@@ -8,11 +8,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxMLMOGU0/7NaPA7/IEsq8tgbWo" crossorigin="anonymous">
     
     <!-- Your CSS file -->
     <link rel="stylesheet" href="css/styles.css">
@@ -20,43 +17,41 @@
 <body>
     <!-- Header -->
     <header class="site-header">
-        <div class="container">
-            <div class="header-inner">
-                <div class="logo-container">
-                    <h1 class="logo-name">Bret Shroats</h1>
-                    <h2 class="logo-tagline">Faith | Family | Tech | Sports</h2>
-                </div>
-                <nav class="main-nav">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Me</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="contact.html" class="pill active">Contact Me</a>
-                </nav>
+        <div class="header-inner">
+            <div class="logo-container">
+                <h1 class="logo-name">Bret Shroats</h1>
+                <h2 class="logo-tagline">Faith | Family | Tech | Sports</h2>
             </div>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Me</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html" class="pill">Contact Me</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Main content -->
-    <main class="hero container">
-        <div class="row align-items-center">
-            <div class="col-md-6 order-md-2 hero-image">
-                <img src="family.jpg" alt="A picture of Bret Shroats with family" class="portrait">
-            </div>
-            <div class="col-md-6 order-md-1 hero-text">
-                <h2>About Me</h2>
-                <p>
+    <main class="hero">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <p class="small">Let Me Introduce</p>
+                <h1 class="big">Myself</h1>
+                
+                <p class="tagline">
                     As a Technical Support Specialist, I'm dedicated to empowering the people who help others. At the University of Kentucky's Center for Innovation in Population Health, I provide the technical backbone that enables Mental and Behavioral Health Specialists to train, educate, and make a difference worldwide.
                 </p>
-                <p>
+                <p class="tagline">
                     My passion is simple: I thrive on working behind the scenes to help people do their best work. With over 3 years of experience in technical support and data analysis, I specialize in translating complex challenges into elegant, user-friendly solutions.
                 </p>
-                <p>
-                    When I'm not at my desk, you can usually find me at a stadium with my family. Whether it is my daughter playing softball or going to a sporting event, I love being part of the action.
-                </p>
+                
                 <div class="button-group">
                     <a href="projects.html" class="btn">View My Projects</a>
                     <a href="contact.html" class="btn btn-secondary">Contact Me</a>
                 </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="Family.jpg" alt="Bret Shroats with family" class="portrait">
             </div>
         </div>
     </main>
@@ -64,10 +59,5 @@
     <footer class="site-footer">
         <p>&copy; 2025 Bret Shroats | <a href="mailto:bshroats5@gmail.com">Send me an email</a></p>
     </footer>
-
-    <!-- JavaScript file for interactivity -->
-    <script src="scripts.js" defer></script>
-    <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyK/z0sRRdvldpwBqXcG2" crossorigin="anonymous"></script>
 </body>
 </html>
