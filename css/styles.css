@@ -422,6 +422,20 @@ body {
     }
 }
 
+.project-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 /* =============================================
    Project Analysis Page Styling
    ============================================= */
@@ -469,9 +483,33 @@ body {
 
 .project-links {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.project-links .btn {
+    padding: 8px 24px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-links .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.project-links .btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.project-links .btn:hover {
+    transform: translateY(-2px);
 }
 
 .project-analysis {
