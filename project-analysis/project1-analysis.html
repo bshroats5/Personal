@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head section as your other pages -->
+    <title>Project Analysis | Project Name</title>
+</head>
+<body>
+    <!-- Same header as your other pages -->
+    
+    <main class="container py-5">
+        <div class="project-analysis">
+            <!-- Project Header -->
+            <header class="project-header mb-5">
+                <h1>Monopoly Analysis</h1>
+                <div class="project-meta">
+                    <span class="date">Completed: April 2024</span>
+                    <span class="tech-stack">Tech Stack: Python, Tableau</span>
+                </div>
+            </header>
+
+            <!-- Project Overview -->
+            <section class="analysis-section">
+                <h2>Project Overview</h2>
+                <p>I wanted to do this project after I lost a game to my 7 year old daughter and I do not want to ever lose another game. 
+                    I set out to answer three questions about the game of Monopoly. I play way to much of this game on my phone 
+                    and with board game to ever lose to my child again.</p>
+            </section>
+
+            <!-- Challenge -->
+            <section class="analysis-section">
+                <h2>The Challenge</h2>
+                <p>Description of the problem you were trying to solve.</p>
+                <ul>
+                    <li>What is the most valuable color group</li>
+                    <li>What is the least valuable color group</li>
+                    <li>What is the most efficient strategy for winning</li>
+                </ul>
+            </section>
+
+            <!-- Solution -->
+            <section class="analysis-section">
+                <h2>The Solution</h2>
+                <p>I found a dataset that had 60,000 rolls of the dice from actual Monopoly games. This dataset allowed me to analyze the game 
+                    mechanics in depth.</p>
+                <!-- You can include code snippets -->
+                <pre><code>
+                    # Import the first data set
+data_set1 = pd.read_csv('Monopoly - Sheet3.csv')
+
+# Import the second data set
+data_set2 = pd.read_csv('Monopoly_Simulator_Counts.csv')
+
+# Combine the two data sets into one data frame
+df = pd.concat([data_set1, data_set2])
+
+# Print the combined data frame
+print(df)
+                </code></pre>
+            </section>
+
+            <!-- Key Features -->
+            <section class="analysis-section">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Orange Properties are the most landed on color group.</li>
+                    <li>The Utilities are the least landed on as well as the dark blue properties.</li>
+                    <li>Buying the orange properties and the red properties is the best strategy for winning.</li>
+                </ul>
+            </section>
+
+            <!-- Technical Details 
+            <section class="analysis-section">
+                <h2>Technical Details</h2>
+                <ul>
+                    <li>Architecture decisions</li>
+                    <li>Libraries and frameworks used</li>
+                    <li>Database design</li>
+                </ul>
+            </section>-->
+
+            <!-- Lessons Learned -->
+            <section class="analysis-section">
+                <h2>Lessons Learned</h2>
+                <p>I learned how to become a better player at monopoly by understanding the game data and strategies.</p>
+            </section>
+
+            <!-- Links -->
+            <section class="analysis-section">
+                <h2>Project Links</h2>
+                <div class="project-links">
+                    <!--<a href="[Live Demo URL]" class="btn btn-primary" target="_blank">View Live Demo</a> -->
+                    <a href="https://github.com/bshroats5/Monopoly" class="btn btn-secondary" target="_blank">GitHub Repository</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+   <footer class="site-footer">
+        <p>&copy; 2025 Bret Shroats | <a href="mailto:bshroats5@gmail.com">Send me an email</a></p>
+    </footer>
+
+    <!-- JavaScript file for interactivity -->
+    <script src="scripts.js" defer></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyK/z0sRRdvldpwBqXcG2" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
