@@ -33,9 +33,11 @@ text
 │   └── assets/
 ├── public/
 └── README.md
-📧 Contact
+
+# 📧 Contact
 Email: bshroats5@gmail.com
 LinkedIn: https://linkedin.com/in/bshroats5
-GitHub: @yourusername
-📄 License
+GitHub: @bshroats5
+
+# 📄 License
 MIT License (or whatever license you prefer)
