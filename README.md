@@ -1,4 +1,4 @@
-Bret Shroats - Personal Website
+# Bret Shroats - Personal Website
 Personal Website showcasing myself and my developing talents
 
 # 🌐 Live Site
