@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Same head section as your other pages -->
-    <title>Project Analysis | Project Name</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Baseball Player Analysis</title>
+    
+      <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <!-- Same header as your other pages -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo-container">
+                    <h1 class="logo-name">Bret Shroats</h1>
+                    <h2 class="logo-tagline">Faith | Family | Tech | Sports</h2>
+                </div>
+                <nav class="main-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="../about.html">About Me</a>
+                    <a href="../projects.html" class="active">Projects</a>
+                    <a href="../contact.html" class="pill">Contact Me</a>
+                </nav>
+            </div>
+        </div>
+    </header>
     
     <main class="container py-5">
         <div class="project-analysis">
             <!-- Project Header -->
             <header class="project-header mb-5">
-                <h1>Project Name Analysis</h1>
+                <h1>Baseball Analysis</h1>
                 <div class="project-meta">
-                    <span class="date">Completed: January 2024</span>
-                    <span class="tech-stack">Tech Stack: Python, JavaScript, React</span>
+                    <span class="date">Completed: March 2024</span>
+                    <span class="tech-stack">Tech Stack: Python, R</span>
                 </div>
             </header>
 
             <!-- Project Overview -->
             <section class="analysis-section">
                 <h2>Project Overview</h2>
-                <p>Brief description of what the project does and its main features.</p>
+                <p>I wanted to do this project after a debate online about Freddie Freeman vs baseball players of the 90s and 2000s</p>
             </section>
 
             <!-- Challenge -->
@@ -29,21 +55,25 @@
                 <h2>The Challenge</h2>
                 <p>Description of the problem you were trying to solve.</p>
                 <ul>
-                    <li>Key challenge point 1</li>
-                    <li>Key challenge point 2</li>
+                    <li>How does Freddie Freeman hits stack up vs other players?</li>
+                    <li>How many Homeruns Freddie hit vs the other players</li>
+                    <li>How many games did Freddie play on averagevs the other players</li>
                 </ul>
             </section>
 
             <!-- Solution -->
             <section class="analysis-section">
                 <h2>The Solution</h2>
-                <p>How you approached solving the problem.</p>
+                <p>I gathered data from Baseball Reference about the players that I choose to compare to Freddie Freeman.</p>
                 <!-- You can include code snippets -->
                 <pre><code>
-                    // Example code
-                    function example() {
-                        return "Hello World";
-                    }
+                    # Creating a new column for the player's name
+                    CalStats['Player'] = 'Cal Ripken Jr.'
+                    BarryStats['Player'] = 'Barry Larkin'
+                    DerekStats['Player'] = 'Derek Jeter'
+                    ChipperStats['Player'] = 'Chipper Jones'
+                    AndreltonStats['Player'] = 'Andrelton Simmons'
+                    FreddieStats['Player'] = 'Freddie Freeman'
                 </code></pre>
             </section>
 
@@ -51,12 +81,13 @@
             <section class="analysis-section">
                 <h2>Key Features</h2>
                 <ul>
-                    <li>Feature 1 with explanation</li>
-                    <li>Feature 2 with explanation</li>
+                    <li>Average Hits compared to each other</li>
+                    <li>Average Home Runs compared to each other</li>
+                    <li>Average Games Played compared to each other</li>
                 </ul>
             </section>
 
-            <!-- Technical Details -->
+            <!-- Technical Details 
             <section class="analysis-section">
                 <h2>Technical Details</h2>
                 <ul>
@@ -64,12 +95,12 @@
                     <li>Libraries and frameworks used</li>
                     <li>Database design</li>
                 </ul>
-            </section>
+            </section>-->
 
             <!-- Lessons Learned -->
             <section class="analysis-section">
                 <h2>Lessons Learned</h2>
-                <p>What you learned from the project and what you might do differently next time.</p>
+                <p>Freddie Freeman is a great player and is comparable to other players in terms of performance metrics.</p>
             </section>
 
             <!-- Links -->
@@ -77,12 +108,21 @@
                 <h2>Project Links</h2>
                 <div class="project-links">
                     <!--<a href="[Live Demo URL]" class="btn btn-primary" target="_blank">View Live Demo</a> -->
-                    <a href="[GitHub Repo URL]" class="btn btn-secondary" target="_blank">GitHub Repository</a>
+                    <a href="https://github.com/bshroats5/Cal-Ripkin-Jr-vs-Others" class="btn btn-secondary" target="_blank">GitHub Repository</a>
                 </div>
             </section>
         </div>
     </main>
 
-    <!-- Same footer as your other pages -->
+   <footer class="site-footer">
+        <p>&copy; 2025 Bret Shroats | <a href="mailto:bshroats5@gmail.com">Send me an email</a></p>
+    </footer>
+
+    <!-- JavaScript file for interactivity -->
+    <script src="scripts.js" defer></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyK/z0sRRdvldpwBqXcG2" crossorigin="anonymous"></script>
+
+
 </body>
 </html>
